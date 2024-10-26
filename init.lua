@@ -37,10 +37,7 @@ end)
 
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
-vim.opt.scrolloff = 10
-
--- custom keymaps
-vim.keymap.set("i", "jj", "<Esc>")
+vim.opt.scrolloff = 20
 
 -- custom auto commands
 vim.api.nvim_create_autocmd("TextYankPost", {

@@ -5,6 +5,7 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 local msg = [[<cmd>echohl Error | echo "KEY DISABLED" | echohl None<CR>]]
 
+-- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 map("i", "jj", "<Esc>")
 map("n", "<C-d>", "<C-d>zz")
 map("n", "<C-u>", "<C-u>zz")
@@ -20,4 +21,3 @@ vim.api.nvim_set_keymap('n', '<Up>', msg, { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<Down>', msg, { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<Left>', msg, { noremap = true, silent = false })
 vim.api.nvim_set_keymap('n', '<Right>', msg, { noremap = true, silent = false })
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")

@@ -9,13 +9,13 @@ local servers = {
   "cssls", 
   "dockerls", 
   "jsonls",
-  "golangci_lint_ls",
+  -- "golangci_lint_ls",
   "gopls"
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- language servers
-require'lspconfig'.golangci_lint_ls.setup{}
+-- require'lspconfig'.golangci_lint_ls.setup{}
 
 require'lspconfig'.gopls.setup{}
 

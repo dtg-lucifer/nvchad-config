@@ -5,20 +5,20 @@ local lspconfig = require "lspconfig"
 
 -- EXAMPLE
 local servers = { 
-  "html", 
-  "cssls", 
-  "dockerls", 
+  "html",
+  "cssls",
+  "dockerls",
   "jsonls",
-  -- "golangci_lint_ls",
+  "ts_ls",
   "gopls"
 }
 local nvlsp = require "nvchad.configs.lspconfig"
 
--- language servers
--- require'lspconfig'.golangci_lint_ls.setup{}
-
 require'lspconfig'.gopls.setup{}
 
+-- require("mason-lspconfig").setup({
+--   ensure_installed: { "tsserver"}
+-- })
 
 -- lsps with default config
 for _, lsp in ipairs(servers) do
@@ -30,8 +30,8 @@ for _, lsp in ipairs(servers) do
 end
 
 -- configuring single server, example: typescript
--- lspconfig.ts_ls.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }
+lspconfig.ts_ls.setup {
+  on_attach = nvlsp.on_attach,
+  on_init = nvlsp.on_init,
+  capabilities = nvlsp.capabilities,
+}
